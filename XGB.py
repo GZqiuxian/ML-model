@@ -12,9 +12,9 @@ from sklearn import metrics
 import xgboost as xgb,numpy as np
 from xgboost.sklearn import XGBRegressor
 from sklearn.model_selection import GridSearchCV
-dataset = pd.read_excel(r"D:\Desktop\CES\6013MPS.xlsx")
-X = dataset.iloc[:,0:9].values
-y = dataset.iloc[:,9].values
+dataset = pd.read_excel(r"D:\Desktop\6013.xlsx")#文件路径
+X = dataset.iloc[:,2:11].values
+y = dataset.iloc[:,11].values
 X_train, x_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=0)
 
 #网格搜索最佳参数
